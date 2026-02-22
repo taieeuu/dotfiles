@@ -11,7 +11,8 @@ gitleaks:
 	$(GITLEAKS) detect --source . --baseline-path $(BASELINE) --redact
 
 .PHONY: update_brewfile
-# Dump the current list of installed Homebrew packages into Brewfile,
-# overwriting the existing file.
 update_brewfile:
 	brew bundle dump --force --file ./Brewfile
+
+install-macos:
+	./install_dotfiles_macos.sh

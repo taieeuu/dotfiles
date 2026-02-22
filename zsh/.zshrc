@@ -12,8 +12,28 @@ export PATH="/opt/homebrew/bin:$PATH"
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-
+####################
+#      alias       #
+####################
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+
+
+####################
+#      alias       #
+####################
+
+export FZF_DEFAULT_OPTS='
+  --layout=reverse
+  --color=bg+:#293739,bg:#1B1D1E,border:#808080,spinner:#E6DB74,hl:#7E8E91,fg:#F8F8F2,header:#7E8E91,info:#A6E22E,pointer:#A6E22E,marker:#F92672,fg+:#F8F8F2,prompt:#F92672,hl+:#F92672
+'
+
+if command -v fzf >/dev/null; then
+  eval "$(fzf --zsh)"
+fi
+
+####################
+#    zsh config    #
+####################
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Path to your Oh My Zsh installation.
@@ -129,6 +149,7 @@ plugins=(
     fast-syntax-highlighting
 )
 
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -172,7 +193,7 @@ autoload -U compinit && compinit
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # START: Added by Updated Airflow Breeze autocomplete setup
-source /Users/taieeuu/Project/Github/airflow/dev/breeze/autocomplete/breeze-complete-zsh.sh
+#source /Users/taieeuu/Project/Github/airflow/dev/breeze/autocomplete/breeze-complete-zsh.sh
 # END: Added by Updated Airflow Breeze autocomplete setup
 # eval "$(pyenv virtualenv-init -)"
 
@@ -197,3 +218,4 @@ unset __conda_setup
 
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH="/opt/homebrew/bin:$PATH"
